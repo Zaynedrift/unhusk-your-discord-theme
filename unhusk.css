@@ -1,0 +1,14 @@
+/**
+ * @name Unhusk your discord!
+ * @author Zaynedrift
+ * @description an improved visual discord experience
+ * @version 1.1
+*/
+
+/* just delete the ones you dont want and enjoy an improved visual discord experience! */
+@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/blobcatcozy.css"; /* Adds blobcatcozy to the top left where the discord icon should be */
+@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/displaywholeprofile.css"; /* displays entire user about me in profile popout */
+@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/deletesummary.css"; /* deletes the channel summery bar + unread messages bar */
+@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/unreadchannelhover.css"; /* adds blobcatcozy when hovering over channels with unread messages + adds animation to hovering over channels */
+
+/* ask for credits if you helped me please :3 */
