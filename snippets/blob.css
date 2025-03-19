@@ -1,8 +1,8 @@
-.wrapper__2ea32 .link__2ea32 {
-  list-item-transition: 0.2s ease;
+.full-motion {
+  --list-item-transition: 0.2s ease;
 }
 .wrapper__2ea32 .link__2ea32 {
-  transition: margin-left var(list-item-transition);
+  transition: margin-left var(--list-item-transition);
 }
 .wrapper__2ea32:hover .link__2ea32 {
   margin-left: 10px;
