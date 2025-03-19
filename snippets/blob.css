@@ -1,3 +1,6 @@
+.wrapper__2ea32 {
+  --list-item-transition: 0.2s ease;
+}
 .wrapper__2ea32 .link__2ea32 {
   transition: margin-left var(--list-item-transition);
 }
