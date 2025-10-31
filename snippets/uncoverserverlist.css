@@ -1,4 +1,4 @@
-.visual-refresh section.panels_c48ade {
+.visual-refresh section.panels__5e434 {
     left: calc(var(--custom-guild-list-width) + var(--space-xs));
     width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
     box-sizing: content-box;
