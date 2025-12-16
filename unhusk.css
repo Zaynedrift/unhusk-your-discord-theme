@@ -2,14 +2,111 @@
  * @name Unhusk your discord!
  * @author Zaynedrift
  * @description an improved visual discord experience
- * @version 1.3
+ * @version 1.5
+*/
+/**
+ * @name Unhusk your discord!
+ * @author Zaynedrift
+ * @description an improved visual discord experience
+ * @version 1.5
 */
 
-/* just delete the ones you dont want and enjoy an improved visual discord experience! */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/blobcatcozy.css"; /* Adds blobcatcozy to the top left where the discord icon should be */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/displaywholeprofile.css"; /* displays entire user about me in profile popout */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/deletesummary.css"; /* deletes the channel summery bar + unread messages bar */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/unreadchannelhover.css"; /* adds blobcatcozy when hovering over channels with unread messages + adds animation to hovering over channels */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/noactivitystatus.css"; /* removes server activity statuses entirely */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/uncoverserverlist.css"; /* uncovers the bottom of the channel list by making the settings area smaller and more normal */
-@import "https://raw.githubusercontent.com/Zaynedrift/unhusk-your-discord-theme/refs/heads/main/snippets/goawaynowplaying.css"; /* removes the "now playing" area in the friends list menu */
+/* stop discord from covering your guild list */
+.visual-refresh section.panels__5e434 {
+  left: calc(var(--custom-guild-list-width) + var(--space-xs));
+  width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
+  box-sizing: border-box;
+
+  .actionButtons_e131a9 button {
+    padding: 0;
+  }
+
+  .container__37e49 {
+    padding: var(--space-xxs);
+    gap: var(--space-4);
+    >.buttons__37e49 {
+      gap: 0;
+    }
+    >.avatarWrapper__37e49 {
+      min-width: 32px !important;
+      >.avatar__37e49 {
+        scale: 0.9;
+      }
+    }
+  }
+}
+nav.guilds__5e434 {
+  margin-bottom: 0 !important;
+}
+.sidebar__5e434:after {
+  display: none;
+}
+
+
+/* [class*=container__4bbc6] {display: none!important;} */
+[class*=separator_aa63ab] {display: none!important;}
+[class*=separator_c1e9c4] {display: none!important;}
+[id*=user-context-note] {display: none!important;}
+[id*=user-context-invite-to-server] {display: none!important;}
+[id*=user-context-remove-friend] {display: none!important;}
+[class*=searchBar__35e86] {display: none!important;}
+[data-list-item-id*="private-channels-uid_"][data-list-item-id*="___nitro"] {display: none!important;}
+[data-list-item-id*="private-channels-uid_"][data-list-item-id*="___shop"] {display: none!important;}
+[class*=sectionDivider__35e86] {display: none!important;}
+[class*=createDMButtonContainer__35e86] {display: none!important;}
+[aria-label*="Show Summaries"] {display: none!important;}
+[aria-label*="Notification Settings"] {display: none!important;}
+[class*=searchBar_e6b769] {display: none!important;}
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {display: none!important;}
+[class^="nowPlayingColumn__133bf"] {display: none!important;}
+[class*=channelAppLauncher_e6e74f], [class*=buttonContainer_e6e74f ] {display: none!important;}
+[class^="descriptionClamp_"] {display: block!important; max-height: max-content;}
+[class^="viewFullBio_"]{display: none!important;}
+[class^="newTopicsBarContainer__0f481"] {display: none!important;}
+[class^="topicsPillContainer__0f481"] {display: none!important;}
+[class*=clanTagChiplet_c19a55], [class*=clanTag_] {display: none!important;}
+[class*=container_c0c49a] {display: none!important;}
+
+/* Concept by refact0r @ https://refact0r.dev/ */
+html {
+  --list-item-transition: 0.2s ease;
+}
+.wrapper__2ea32 .link__2ea32 {
+  transition: margin-left var(--list-item-transition);
+}
+.wrapper__2ea32:hover .link__2ea32 {
+  margin-left: 10px;
+}
+.unread__2ea32 {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-left: -4px;
+  transition: var(--list-item-transition);
+}
+.wrapper__2ea32:hover .unread__2ea32 {
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  margin-left: 3px;
+  background-color: transparent;
+  background: url('https://cdn.discordapp.com/emojis/1026533070955872337.webp?size=48');
+  background-size: 12px;
+  background-position: center;
+}
+/* end concept */
+
+/* favorite icon replacer*/
+.childWrapper__6e9f8 > svg:not(.favoriteIcon_dcc7a4) {
+  --discord-icon: none;
+	display: var(--discord-icon);
+}
+
+.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
+	background: url('https://cdn.discordapp.com/emojis/1026533070955872337');
+	background-color: transparent !important;
+	background-size: cover;
+    width: 80%;
+    height: 80%;
+}
