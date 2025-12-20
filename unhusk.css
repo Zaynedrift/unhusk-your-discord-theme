@@ -72,8 +72,8 @@ nav._5e434347c823b592-guilds {
 [class*=app-launcher-entrypoint] {display: none!important;}
 
 /* Show full bio */
-[class^="descriptionClamp_"] {display: block!important; max-height: max-content;}
-[class^="viewFullBio_"]{display: none!important;}
+[class^="f5f93a5c4078d63c-descriptionClamp"] {display: block!important; max-height: max-content;}
+[class^="f5f93a5c4078d63c-viewFullBio"]{display: none!important;}
 
 /* Hides New Topics Bar and Topic Pills */
 [class^="_0f481cbbd7530492-newTopicsBarContainer"] {display: none!important;}
