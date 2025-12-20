@@ -2,32 +2,28 @@
  * @name Unhusk your discord!
  * @author Zaynedrift
  * @description an improved visual discord experience
- * @version 1.5
-*/
-/**
- * @name Unhusk your discord!
- * @author Zaynedrift
- * @description an improved visual discord experience
- * @version 1.5
+ * @version 1.6
 */
 
+/* hey thanks for reading, I made this while miserably sick with a stomach virus so theres a lot of stuff im unsure about, idk what 9 month ago me was on and idk what im on atm either, I suck at css, I know I do, so if you want to help make this actually good you may <3*/
+
 /* stop discord from covering your guild list */
-.visual-refresh section.panels__5e434 {
+.visual-refresh section._5e434347c823b592-panels {
   left: calc(var(--custom-guild-list-width) + var(--space-xs));
   width: calc(100% - var(--custom-guild-list-width) - var(--space-xs)*2);
   box-sizing: border-box;
 
-  .actionButtons_e131a9 button {
+  ._e131a99484292a19-actionButtons button {
     padding: 0;
   }
 
-  .container__37e49 {
+  ._37e49614b9f110a9-container {
     padding: var(--space-xxs);
     gap: var(--space-4);
     >.buttons__37e49 {
       gap: 0;
     }
-    >.avatarWrapper__37e49 {
+    >._37e49614b9f110a9-avatarWrapper {
       min-width: 32px !important;
       >.avatar__37e49 {
         scale: 0.9;
@@ -35,57 +31,75 @@
     }
   }
 }
-nav.guilds__5e434 {
+nav._5e434347c823b592-guilds {
   margin-bottom: 0 !important;
 }
-.sidebar__5e434:after {
+._5e434347c823b592-sidebar:after {
   display: none;
 }
 
 
-/* [class*=container__4bbc6] {display: none!important;} */
-[class*=separator_aa63ab] {display: none!important;}
-[class*=separator_c1e9c4] {display: none!important;}
+/* Hides Section Dividers */
+[class*=e6b7699ce8339e1c-sectionDivider] {display: none!important;} /* dm list */
+[class*=aa63abf63dbd9cce-separator] {display: none!important;} /* message bar */
+[class*=c1e9c47c23f12ca3-separator] {display: none!important;} /* context menu */
+
+/* Hides unnecessary context menu items */
 [id*=user-context-note] {display: none!important;}
 [id*=user-context-invite-to-server] {display: none!important;}
 [id*=user-context-remove-friend] {display: none!important;}
-[class*=searchBar__35e86] {display: none!important;}
+
+/* Hides Nitro and Shop from DM List */
 [data-list-item-id*="private-channels-uid_"][data-list-item-id*="___nitro"] {display: none!important;}
 [data-list-item-id*="private-channels-uid_"][data-list-item-id*="___shop"] {display: none!important;}
-[class*=sectionDivider__35e86] {display: none!important;}
-[class*=createDMButtonContainer__35e86] {display: none!important;}
+
+/* haeh? */
 [aria-label*="Show Summaries"] {display: none!important;}
 [aria-label*="Notification Settings"] {display: none!important;}
-[class*=searchBar_e6b769] {display: none!important;}
+
+/* Hides Search Bar */
+[class*=e6b7699ce8339e1c-searchBar] {display: none!important;}
+
+/* someone tell me what this does :broken_heart: */
 [class*='membersGroup']:has([role=button]),
 [class*='member'] [class*='container']:has([class*='badges']) {display: none!important;}
-[class^="nowPlayingColumn__133bf"] {display: none!important;}
-[class*=channelAppLauncher_e6e74f], [class*=buttonContainer_e6e74f ] {display: none!important;}
+
+/* Hides Now Playing Column */
+[class^="_133bf5eea8e33a34-nowPlayingColumn"] {display: none!important;}
+
+/* Hides App Launcher Button and Gift button (fuck u discord) */
+[class*=c0c49a3e5c8626ac-container] {display: none!important;}
+[class*=app-launcher-entrypoint] {display: none!important;}
+
+/* Show full bio */
 [class^="descriptionClamp_"] {display: block!important; max-height: max-content;}
 [class^="viewFullBio_"]{display: none!important;}
-[class^="newTopicsBarContainer__0f481"] {display: none!important;}
-[class^="topicsPillContainer__0f481"] {display: none!important;}
-[class*=clanTagChiplet_c19a55], [class*=clanTag_] {display: none!important;}
-[class*=container_c0c49a] {display: none!important;}
+
+/* Hides New Topics Bar and Topic Pills */
+[class^="_0f481cbbd7530492-newTopicsBarContainer"] {display: none!important;}
+[class^="_0f481cbbd7530492-topicsPill"] {display: none!important;}
+
+/* Hides Clan Tags */
+[class*=_972a0d22c8afa7f0-clanTag], [class*=clanTag_] {display: none!important;}
 
 /* Concept by refact0r @ https://refact0r.dev/ */
 html {
   --list-item-transition: 0.2s ease;
 }
-.wrapper__2ea32 .link__2ea32 {
+._2ea32c412048f708-wrapper ._2ea32c412048f708-link {
   transition: margin-left var(--list-item-transition);
 }
-.wrapper__2ea32:hover .link__2ea32 {
+._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-link {
   margin-left: 10px;
 }
-.unread__2ea32 {
+._2ea32c412048f708-unread {
   border-radius: 50%;
   width: 8px;
   height: 8px;
   margin-left: -4px;
   transition: var(--list-item-transition);
 }
-.wrapper__2ea32:hover .unread__2ea32 {
+._2ea32c412048f708-wrapper:hover ._2ea32c412048f708-unread {
   width: 12px;
   height: 12px;
   margin-top: -6px;
@@ -98,15 +112,20 @@ html {
 /* end concept */
 
 /* favorite icon replacer*/
-.childWrapper__6e9f8 > svg:not(.favoriteIcon_dcc7a4) {
+._6e9f8dce4cc18de3-childWrapper > svg:not(.favoriteIcon_dcc7a4) {
   --discord-icon: none;
 	display: var(--discord-icon);
 }
 
-.childWrapper__6e9f8:has(> svg:not(.favoriteIcon_dcc7a4)) {
+._6e9f8dce4cc18de3-childWrapper:has(> svg:not(.favoriteIcon_dcc7a4)) {
 	background: url('https://cdn.discordapp.com/emojis/1026533070955872337');
 	background-color: transparent !important;
 	background-size: cover;
     width: 80%;
     height: 80%;
 }
+
+/* I lowkey cannot find these so ima just leave em, someone fix this for me :plead:*/
+[class*=searchBar__35e86] {display: none!important;}
+[class*=sectionDivider__35e86] {display: none!important;}
+[class*=createDMButtonContainer__35e86] {display: none!important;}
